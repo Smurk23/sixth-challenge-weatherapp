@@ -37,12 +37,30 @@ function addCityToHistory(search) {
 
 }
 
+function displayItems(city, data) {
+    //to be done
+}
+
+
 function getWeather(data) {
     var { lat } = data;
     var { lon } = data;
     var city = data.name;
 
-    let api = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=$a99e70795dc597a36ffb255b32f8faf1`;
+    let api = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=a99e70795dc597a36ffb255b32f8faf1`;
+
+    fetch(api)
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+
+            console.log('data = ', data)
+            displayItems(city, data);
+        })
+        .catch(function (err) {
+            console.error(err);
+        });
 }
 
 function getCoords(search) {
