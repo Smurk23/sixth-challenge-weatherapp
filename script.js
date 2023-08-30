@@ -38,7 +38,11 @@ function addCityToHistory(search) {
 }
 
 function getWeather(data) {
+    var { lat } = data;
+    var { lon } = data;
+    var city = data.name;
 
+    let api = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=$a99e70795dc597a36ffb255b32f8faf1`;
 }
 
 function getCoords(search) {
