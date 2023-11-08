@@ -61,11 +61,17 @@ let imageEl = document.createElement('img')
 imageEl.setAttribute('src', weatherIconUrl);
 imageEl.setAttribute('alt', description);
 cityDateIconEl.append(imageEl);
+}
+
+function displayFiveDayWeather(city, data) {
 
 }
+
 function displayItems(city, data) {
     //to be done
     displayTodayWeather(city, data.list[0]);
+    displayFiveDayWeather(city, data.list);
+
 }
 
 
