@@ -37,8 +37,16 @@ function addCityToHistory(search) {
 
 }
 
+function displayTodayWeather(city, data)  {
+let temp = data.main.temp;
+let windspeed = data.wind.speed;
+
+let tempEl = document.getElementById("temp");
+tempEl.textContent = `Temp:  ${temp}  F`;
+}
 function displayItems(city, data) {
     //to be done
+    displayTodayWeather(city, data.list[0]);
 }
 
 

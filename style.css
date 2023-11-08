@@ -23,3 +23,9 @@
     margin: 5px;
     padding: 5px;
 }
+
+.currentDay {
+    background-color: greenyellow;
+    margin: 5px;
+    padding: 5px;
+}
