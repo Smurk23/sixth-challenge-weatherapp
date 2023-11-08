@@ -42,6 +42,8 @@ let temp = data.main.temp;
 let windspeed = data.wind.speed;
 let humidity = data.main.humidity;
 let date = data.dt_txt.split(' ')[0];
+let weatherIconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+let description = data.weather[0].description;
 
 let tempEl = document.getElementById("temp");
 tempEl.textContent = `Temp:  ${temp}  F`;
@@ -54,6 +56,11 @@ humidityEl.textContent = `Humidity: ${humidity} %`;
 
 let cityDateIconEl = document.getElementById('place_date');
 cityDateIconEl.textContent = `${city} ` + date;
+
+let imageEl = document.createElement('img')
+imageEl.setAttribute('src', weatherIconUrl);
+imageEl.setAttribute('alt', description);
+cityDateIconEl.append(imageEl);
 
 }
 function displayItems(city, data) {
