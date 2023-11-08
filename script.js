@@ -51,6 +51,8 @@ windEl.textContent = `Wind Speed:  ${windspeed}  MPH`;
 let humidityEl = document.getElementById('humidity');
 humidityEl.textContent = `Humidity: ${humidity} %`;
 
+let cityDateIconEl = document.getElementById('place_date');
+cityDateIconEl.textContent = `${city}`;
 
 }
 function displayItems(city, data) {
