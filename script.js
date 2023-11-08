@@ -40,12 +40,16 @@ function addCityToHistory(search) {
 function displayTodayWeather(city, data)  {
 let temp = data.main.temp;
 let windspeed = data.wind.speed;
-let humidity
+let humidity = data.main.humidity;
+
 let tempEl = document.getElementById("temp");
 tempEl.textContent = `Temp:  ${temp}  F`;
 
 let windEl = document.getElementById("wind");
 windEl.textContent = `Wind Speed:  ${windspeed}  MPH`;
+
+let humidityEl = document.getElementById('humidity');
+humidityEl.textContent = `Humidity: ${humidity} %`;
 
 
 }
