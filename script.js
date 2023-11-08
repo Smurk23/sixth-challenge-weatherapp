@@ -41,6 +41,7 @@ function displayTodayWeather(city, data)  {
 let temp = data.main.temp;
 let windspeed = data.wind.speed;
 let humidity = data.main.humidity;
+let date = data.dt_txt.split(' ')[0];
 
 let tempEl = document.getElementById("temp");
 tempEl.textContent = `Temp:  ${temp}  F`;
@@ -52,7 +53,7 @@ let humidityEl = document.getElementById('humidity');
 humidityEl.textContent = `Humidity: ${humidity} %`;
 
 let cityDateIconEl = document.getElementById('place_date');
-cityDateIconEl.textContent = `${city}`;
+cityDateIconEl.textContent = `${city} ` + date;
 
 }
 function displayItems(city, data) {
